@@ -1,10 +1,10 @@
-<h1>All Restaurants</h1>
-<p>Find me in app/views/restaurants/index.html.erb</p>
+<div class='header'>
+	<h1>All Restaurants</h1>
+</div>
+<h3><%= link_to "New Restaurant?", new_restaurant_path %></h3>
 
 <% @restaurants.each do |restaurant| %>
-  <h2><%= restaurant.name %></h2>
-  <h4><%= restaurant.address %> | <%= restaurant.phone_number %> | <%= restaurant.category %></h4>
+  <h4><%= restaurant.name %></h4>
+  <h6><%= restaurant.address %> | <%= restaurant.phone_number %> | <%= restaurant.category %></h6>
   <p><%= link_to "View", restaurant_path(restaurant)%> | <%= link_to "Add Review", new_restaurant_review_path(restaurant) %> </p>
 <% end %>
-
-<h2><%= link_to "Add a new Restaurant", new_restaurant_path %></h2>

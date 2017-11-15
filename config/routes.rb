@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'reviews/new'
+  # get 'reviews/new'
 
-  get 'reviews/create'
+  # get 'reviews/create'
 
-  get 'restaurants/index', to: 'restaurants#index'
+  # get 'restaurants/index', to: 'restaurants#index'
 
   # get 'restaurants/:id', to: 'restaurants#show'
 
@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # post 'restaurants', to: 'restaurant#create'
 
   resources :restaurants do
-    resources :reviews, only: [:new, :create]
+    resources :reviews, only: [:index, :new, :create]
   end
 
   root to: 'restaurants#index'
