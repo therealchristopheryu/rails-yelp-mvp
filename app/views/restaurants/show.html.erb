@@ -1,5 +1,6 @@
-<h1><%= @restaurant.name %></h1>
-<p><%= @restaurant.address %> | <%= @restaurant.phone_number %> | <%= @restaurant.category %> | <%= @restaurant.reviews.count %> Reviews </p>
+<div class="container">
+	<h1 style="text-align: center"><%= @restaurant.name %></h1>
+<p style="text-align: center"><%= @restaurant.address %> | <%= @restaurant.phone_number %> | <%= @restaurant.category %> | <%= @restaurant.reviews.count %> Reviews </p>
 
 <table class='ratings'>
 	<tr>
@@ -14,7 +15,9 @@
   	<% end %>
 </table>
 <div>
-	<%= link_to "Back", restaurants_path %>
-	<%= link_to "Add Review", new_restaurant_review_path(@restaurant) %>
+	<%= link_to "Back", restaurants_path, class: 'btn btn-danger' %>
+	<%= link_to "Add Review", new_restaurant_review_path(@restaurant), class: 'btn btn-primary' %>
 </div>
 
+
+</div>

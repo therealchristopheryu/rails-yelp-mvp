@@ -1,10 +1,10 @@
-<div class='header'>
-	<h1>All Restaurants</h1>
-</div>
-<h3><%= link_to "New Restaurant?", new_restaurant_path %></h3>
+<div class='container'>
+	<h1 style="text-align: center">All Restaurants</h1>
+	<h3><%= link_to "New Restaurant?", new_restaurant_path %></h3>
 
 <% @restaurants.each do |restaurant| %>
   <h4><%= restaurant.name %></h4>
   <h6><%= restaurant.address %> | <%= restaurant.phone_number %> | <%= restaurant.category %></h6>
   <p><%= link_to "View", restaurant_path(restaurant)%> | <%= link_to "Add Review", new_restaurant_review_path(restaurant) %> </p>
 <% end %>
+</div>
